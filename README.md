@@ -19,15 +19,6 @@ These identity tokens (po_token and visitor_data) generated using this tool will
 
 ## Tutorials for "oneshot" command: run the program and get the po_token and visitor_data values
 
-### Tutorial with Docker
-1. Run the script: `docker run quay.io/invidious/youtube-trusted-session-generator`
-2. Copy paste the values of these the two parameters (po_token and visitor_data) in config.yaml
-   ```
-   po_token: XXX
-   visitor_data: XXX
-   ```
-3. Restart Invidious or the program that use the po_token functionality.
-
 ### Tutorial without Docker
 1. Install Chromium or Google Chrome.
 2. Create a new virtualenv: `virtualenv venv`
@@ -41,15 +32,7 @@ These identity tokens (po_token and visitor_data) generated using this tool will
    ```
 7. Restart Invidious or the program that use the po_token functionality.
 
-
-### Why running as root for Docker?
-
-In "headless: false", Chromium does not support sanboxing when it is not ran by root user.
-
 ## Tutorials for "always running" program: Get po_token on demand using HTTP.
-
-### Tutorial with Docker
-Run the program: `docker run -p 8080:8080 quay.io/invidious/youtube-trusted-session-generator:webserver`
 
 ### Tutorial without Docker
 1. Install Chromium or Google Chrome.
@@ -60,6 +43,6 @@ Run the program: `docker run -p 8080:8080 quay.io/invidious/youtube-trusted-sess
 
 ### Usage of the HTTP API
 
-Send your requests to http://localhost:8080/token in order to obtain your po_token.
+Send your requests to http://localhost:8703/token in order to obtain your po_token.
 
-You can also force refresh the po_token in the cache by sending a request to http://localhost:8080/update.
+You can also force refresh the po_token in the cache by sending a request to http://localhost:8703/update.
