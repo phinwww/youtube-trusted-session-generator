@@ -1,5 +1,7 @@
 # YouTube trusted session generator
 
+NOTE: Docker is not supported in this fork. I'll probably change it to make it supported but it's not my focus.
+
 This project is tested with BrowserStack.
 
 ## Description
