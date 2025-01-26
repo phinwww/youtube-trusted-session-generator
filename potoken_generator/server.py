@@ -15,7 +15,7 @@ class ThreadingWSGIServer(WSGIServer, ThreadingMixIn):
 
 class PotokenServer:
 
-    def __init__(self, potoken_extractor: PotokenExtractor, port: int = 8080, bind_address: str = '0.0.0.0') -> None:
+    def __init__(self, potoken_extractor: PotokenExtractor, port: int = 8703, bind_address: str = '0.0.0.0') -> None:
         self.port = port
         self.bind_address = bind_address
         self._potoken_extractor = potoken_extractor
